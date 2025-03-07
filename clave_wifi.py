@@ -10,6 +10,7 @@ try:
             password = line.split(':')[1].strip()
             print(f'La contraseña de la red {perfil_red} es: {password}')
     else:
-        print(f'no se pudo encontrar la contraseña para la red {perfil_red}')
+        print(f'No se pudo encontrar la contraseña para la red {perfil_red}')
 
-except 
+except subprocess.CalledProcessError:
+    print(f'No se pudo obtener la información del perfil {perfil_red}')
