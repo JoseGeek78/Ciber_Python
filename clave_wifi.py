@@ -7,4 +7,9 @@ try:
     # Si el sistema es en inglés se pondrá 'Key Content'
     if 'Contenido de la clave' in resultados:
         for line in resultados.split('\n'):
-            password = lien.split
+            password = line.split(':')[1].strip()
+            print(f'La contraseña de la red {perfil_red} es: {password}')
+    else:
+        print(f'no se pudo encontrar la contraseña para la red {perfil_red}')
+
+except 
