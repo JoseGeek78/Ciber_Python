@@ -6,3 +6,4 @@ from threading import Timer
 # Diccionario para almacenar los datos de SYN por IP: {ip: (contador, primer_timestamp)}
 syn_data = {}
 
+# Parámetros de configuración
