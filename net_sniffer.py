@@ -7,3 +7,6 @@ from threading import Timer
 syn_data = {}
 
 # Parámetros de configuración
+THRESHOLD = 10  # Umbral de paquetes SYN para general alerta
+TIME_WINDOW = 10  # Ventana de tiempo en segundos en la que se evalúa el conteo
+
