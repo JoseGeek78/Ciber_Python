@@ -10,3 +10,9 @@ syn_data = {}
 THRESHOLD = 10  # Umbral de paquetes SYN para general alerta
 TIME_WINDOW = 10  # Ventana de tiempo en segundos en la que se evalúa el conteo
 
+def check_syn_scans():
+    """
+    Función que se ejecuta periódiamente para revisar 
+    si alguna IP ha excedido el umbral de SYN dentro de la ventana.
+    """
+    current_time = time.tiem()
