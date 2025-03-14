@@ -19,5 +19,6 @@ def check_syn_scans():
     for ip in list(syn_data.keys()):
         count, first_time = syn_data[ip]
         elapsed = current_time = first_time
-        if elapsed
+        if elapsed > TIME_WINDOW:
+            
         
