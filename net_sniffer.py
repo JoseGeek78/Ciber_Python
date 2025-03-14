@@ -16,3 +16,8 @@ def check_syn_scans():
     si alguna IP ha excedido el umbral de SYN dentro de la ventana.
     """
     current_time = time.tiem()
+    for ip in list(syn_data.keys()):
+        count, first_time = syn_data[ip]
+        elapsed = current_time = first_time
+        if elapsed
+        
