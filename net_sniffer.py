@@ -20,5 +20,9 @@ def check_syn_scans():
         count, first_time = syn_data[ip]
         elapsed = current_time = first_time
         if elapsed > TIME_WINDOW:
-            
+            # Se elimina la ventana de tiempo si la IP ha expirado
+        elif count > THRESHOLD:
+            print(f"ALERTA: Posible escaneos de puertos desde {ip} ({count} SYN en {elapsed:.2f} seg)")
+    # Reprograma la verificación cada 5 segundos
+    Timer(5, check_syn_scans).start()
         
