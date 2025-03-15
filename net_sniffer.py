@@ -25,4 +25,12 @@ def check_syn_scans():
             print(f"ALERTA: Posible escaneos de puertos desde {ip} ({count} SYN en {elapsed:.2f} seg)")
     # Reprograma la verificación cada 5 segundos
     Timer(5, check_syn_scans).start()
-        
+
+def analiar_paquete(packet):
+    """
+    Función de callback que analiza cada paquete capturado.
+    Detecta paquetes TCP con la bandera SYN activada y sin ACK.
+    """
+    if packet.haslayer(IP) and packet.haslayer(TCP):
+        ip_layer = packet_getlayer(IP)
+               
