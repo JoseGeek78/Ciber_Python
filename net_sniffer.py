@@ -34,4 +34,6 @@ def analiar_paquete(packet):
     if packet.haslayer(IP) and packet.haslayer(TCP):
         ip_layer = packet_getlayer(IP)
         tcp_layer = packet.getlayer(TCP)
-        # Detectar paquetes SYN: La bandera SYN equivale a 0x02       
+        # Detectar paquetes SYN: La bandera SYN equivale a 0x02
+        if tcp_layer.flags == 0x02:
+                   
