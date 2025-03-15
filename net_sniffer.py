@@ -36,4 +36,8 @@ def analiar_paquete(packet):
         tcp_layer = packet.getlayer(TCP)
         # Detectar paquetes SYN: La bandera SYN equivale a 0x02
         if tcp_layer.flags == 0x02:
-                   
+            src_ip = ip_layer.src
+            now = time.time()
+            if src_ip in syn_data:
+                count, first_time > syn_data[src_ip]
+                #  Si el tiempo transcurrido supera la ventana, se reinicia el contador     
