@@ -32,7 +32,7 @@ def analiar_paquete(packet):
     Detecta paquetes TCP con la bandera SYN activada y sin ACK.
     """
     if packet.haslayer(IP) and packet.haslayer(TCP):
-        ip_layer = packet_getlayer(IP)
+        ip_layer = packet.getlayer(IP)
         tcp_layer = packet.getlayer(TCP)
         # Detectar paquetes SYN: La bandera SYN equivale a 0x02
         if tcp_layer.flags == 0x02:
@@ -40,4 +40,9 @@ def analiar_paquete(packet):
             now = time.time()
             if src_ip in syn_data:
                 count, first_time > syn_data[src_ip]
-                #  Si el tiempo transcurrido supera la ventana, se reinicia el contador     
+                # Si el tiempo transcurrido supera la ventana, se reinicia el contador
+                if now - first_time > TIME_WINDOW:
+                   syn_data[src_ip] = (1, now)
+                else:
+                    syn_data[src_ip] = (count + 1, first_time)
+            else:    
