@@ -9,4 +9,4 @@ for conn in psutil.net_connections(kind='inet'):
     
     # Si hay una dirección remota y el puerto no está en la lista segura
     if raddr and raddr.port not in SAFE_PORTS:
-        print(f"[ALERTA] Conexión sospechosa")
+        print(f"[ALERTA] Conexión sospechosa -> {laddr.ip} -> {raddr.ip}:{raddr.port} [{status}]")
