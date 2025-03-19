@@ -1,3 +1,10 @@
 import socket
 
-TARGET = "192.168.1.1"
+TARGET = "192.168.1.1" # Cambia por la IP que quieras escanear
+PORTS = [21, 22, 23, 80, 443, 3380] # Puertos a verificar
+
+for port in PORTS:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(1) # Tiempo máximo de espera
+        if s.connect_ex((TARGET, port)) == 0:
+            print(f"[+] Puerto {port} abiertp en {TARGET}")
