@@ -8,3 +8,4 @@ def generar_password(longitud):
 
 print("Contraseña generada: ", generar_password(12))
 # Esta función genera una contraseña aleatoria de longitud 12 utilizando letras mayúsculas, minúsculas, dígitos y caracteres especiales.
+
