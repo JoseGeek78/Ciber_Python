@@ -1,5 +1,5 @@
 import os
-import psutilsutil
+import psutil
 
 MALICIOUS_PROCESSV= "hacker_tool.exe"
 
