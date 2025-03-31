@@ -1,15 +1,10 @@
 import os
 import psutil
 
-MALICIOUS_PROCESSV= "hacker_tool.exe"
+MALICIOUS_PROCESS= "hacker_tool.exe"
 
 for proc in psutil.process_iter(attrs={['name']}):
     if proc.info['name'] == MALICIOUS_PROCESS:
-        print(f"Malicious process {MALICIOUS_PROCESS} detected!")
-        os.system("shutdown /s /t 1")  # Shutdown the system immediately
-        break
-    else:
-        print(f"Process {proc.info['name']} is safe.")
-        continue
-# This script checks for a specific malicious process and shuts down the system if found.
-    
+        print("[ALERTA] Proceso malicioso detectado. Apagando el sistema...")
+        os.system("shutdown /s /t 1")  # Para Windows
+        # os.system("sudo shutdown -h now")  # Para Linux
