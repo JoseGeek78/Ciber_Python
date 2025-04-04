@@ -1,9 +1,15 @@
 import os
 import platform
-import reimport sys
+import re
+import sys
 
-MALICIOUS_IP = "111.111.1.111" # IP maliciosa a bloquear
+# Dirección IP maliciosa a bloquear (puedes cambiarla dinámicamente)
+MALICIOUS_IP = "111.111.1.111"
 
-# Ejecutar comando iptables para bloquear la IP
-os.system(f"sudo iptables -A INPUT -s {MALICIOUS_IP} -j DROP")
-print(f"[+] 1bloqueada la IP maliciosa: {MALICIOUS_IP}")
+# Verificamos que estamos ejecutando esto en un sistema Linux
+if platform.system() != "Linux":
+    print("[X] Este script solo puede ejecutarse en sistemas Linux.")
+    sys.exit(1)
+    
+# Validación sencilla de fortmato de IPv4
+
