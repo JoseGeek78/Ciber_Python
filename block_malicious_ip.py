@@ -1,4 +1,6 @@
 import os
+import platform
+import reimport sys
 
 MALICIOUS_IP = "111.111.1.111" # IP maliciosa a bloquear
 
