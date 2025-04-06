@@ -31,3 +31,4 @@ except subprocess.CalledProcessError:
 except Exception as e:
     # Captura cualquier otro error inesperado (por ejemplo, error en ejecución o salida no estándar)
     print(f'⚠️ Ocurrió un error inesperado: {str(e)}')
+
