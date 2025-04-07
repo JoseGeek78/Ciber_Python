@@ -12,3 +12,4 @@ for proc in psutil.process_iter(['pid', 'name']):
         break
 else:
     print("No suspicious processes found.")
+    
