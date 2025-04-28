@@ -40,4 +40,3 @@ try:
 except KeyboardInterrupt:
     print("\nPrograma finalizado.")
     guardar_en_archivo()
-    
