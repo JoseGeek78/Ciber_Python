@@ -8,4 +8,4 @@ for port in PORTS:
         s.settimeout(1) # Tiempo máximo de espera
         if s.connect_ex((TARGET, port)) == 0:
             print(f"[+] Puerto {port} abiertp en {TARGET}")
-            
+        
