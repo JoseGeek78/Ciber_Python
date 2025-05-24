@@ -28,3 +28,4 @@ if exit_code == 0:
 else:
     print(f"[X] Error al bloquear la dirección IP {MALICIOUS_IP}.")
     sys.exit(1)
+    
