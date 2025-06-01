@@ -31,4 +31,9 @@ except subprocess.CalledProcessError:
 except Exception as e:
     # Captura cualquier otro error inesperado (por ejemplo, error en ejecución o salida no estándar)
     print(f'⚠️ Ocurrió un error inesperado: {str(e)}')
-
+    
+# Asegúrate de reemplazar "NOMBRE_DE_LA_RED" con el nombre real de la red Wi-Fi que deseas consultar.
+# Nota: Este script debe ejecutarse con permisos de administrador para acceder a la información de los perfiles Wi-Fi.
+# Asegúrate de que el nombre del perfil de red Wi-Fi sea correcto y que el script se ejecute con permisos de administrador.
+# Nota: Este script debe ejecutarse con permisos de administrador para acceder a la información de los perfiles Wi-Fi.
+# Asegúrate de que el nombre del perfil de red Wi-Fi sea correcto y que el script se ejecute con permisos de administrador.
