@@ -27,4 +27,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
+# Este script escanea las conexiones de red activas y alerta sobre conexiones sospechosas
+# que no utilizan puertos considerados seguros. 
+# Requiere la biblioteca psutil para acceder a las conexiones de red. 
