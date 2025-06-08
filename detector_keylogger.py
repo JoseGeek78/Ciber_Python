@@ -32,3 +32,4 @@ if __name__ == "__main__":
                 print(f"- {ruta} | Nombre sospechoso: {nombre_flag} | Contenido sospechoso: {contenido_flag}")
         else:
             print("No se han encontrado archivos sospechosos.")
+# detector_keylogger.py
