@@ -65,3 +65,5 @@ def monitor_logs():
 if __name__ == "__main__":
     # Ejecutar la función de monitorización cuando se invoque el script.
     monitor_logs()
+# Este script monitoriza un archivo de log en tiempo real, buscando accesos sospechosos a un archivo específico.
+# Se emiten alertas en caso de detectar accesos al archivo /etc/passwd.
