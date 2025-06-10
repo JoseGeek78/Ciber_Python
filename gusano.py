@@ -34,3 +34,5 @@ def main():
 
 if __name__ == "__main__":
     main()  
+# Este script crea copias de un archivo especificado en la línea de comandos.
+# El nombre de cada copia se formatea como "nombre_base_n.ext", donde n es el número de copia.
