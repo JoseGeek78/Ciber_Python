@@ -42,4 +42,5 @@ for icmp_type, count in icmp_counter.items():
 SAVE_TO_PCAP = True
 if SAVE_TO_PCAP and captured_packets:
     wrpcap("icmp_capturados.pcap", captured_packets)
-    print("\nPaquetes guardados en 'icmp_capturados.pcap'")
+    print("\nPaquetes guardados en 'icmp_capturados.pcap'") 
+    
