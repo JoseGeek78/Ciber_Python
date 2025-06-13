@@ -45,4 +45,3 @@ if SAVE_TO_PCAP and captured_packets:
     print("\nPaquetes guardados en 'icmp_capturados.pcap'") 
 else:
     print("\nNo se capturaron paquetes o no se guardarán en pcap.") 
-    
