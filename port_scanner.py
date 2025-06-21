@@ -9,4 +9,6 @@ for port in PORTS:
         if s.connect_ex((TARGET, port)) == 0:
             print(f"[+] Puerto {port} abiertp en {TARGET}")
         else:
-            print(f"[-] Puerto {port} cerrado en {TARGET}")
+            print(f"[-] Puerto {port} cerrado en {TARGET}")     
+# Este script escanea los puertos especificados en la variable PORTS
+# en la dirección IP especificada en TARGET.
