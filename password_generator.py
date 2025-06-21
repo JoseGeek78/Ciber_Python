@@ -24,3 +24,4 @@ def generar_password(longitud):
 print("Contraseña generada:", generar_password(12))
 print("Contraseña generada:", generar_password(16))
 print("Contraseña generada:", generar_password(20))
+    
