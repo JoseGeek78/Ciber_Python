@@ -47,3 +47,5 @@ if __name__ == "__main__":
     while True:
         monitor_processes()
         time.sleep(SCAN_INTERVAL)
+    log_alert("=== Monitor de procesos maliciosos detenido ===")
+    # Nota: El código no alcanzará esta línea debido al bucle infinito.
