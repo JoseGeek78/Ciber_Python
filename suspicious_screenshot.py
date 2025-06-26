@@ -32,4 +32,5 @@ for proc in psutil.process_iter(['pid', 'name']):
         continue
 else:
     # Este bloque se ejecuta solo si el bucle se completa sin haber realizado break (sin encontrar procesos sospechosos)
-    print("No se encontraron procesos sospechosos.")
+    print("No se encontraron procesos sospechosos.")    
+    
